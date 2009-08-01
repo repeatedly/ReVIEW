@@ -1,0 +1,14 @@
+ReVIEW(執筆支援ツール)
+=====================
+
+このツールは青木さんが公開されている ReVIEW を私(nari)がちょっとだけ拡
+張したものです。
+
+オリジナルの ReVIEW リポジトリ
+http://i.loveruby.net/svn/public/review/
+
+青木さんによる紹介記事
+http://www.loveruby.net/d/20080623.html
+
+私が拡張した分のドキュメントは次の場所に記述しています。
+doc/format_extend.txt
