@@ -146,7 +146,8 @@ module ReVIEW
     end
 
     def paragraph(lines)
-      puts "<p>#{lines.join("\n")}</p>"
+      # NOTE: 通常の文章に改行が含まれると変な空白スペースが生まれるため。
+      puts "<p>#{lines.join("")}</p>"
     end
 
     def read(lines)
