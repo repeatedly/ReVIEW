@@ -83,7 +83,7 @@ module ReVIEW
       return unless print?(1)
       html = ""
       book.each_part do |part|
-        html << h1(part.name) unless part.name.empty?
+        html << h1(part.name) if part.name
         part.each_section do |chap|
           if chap.number
             name = "chap#{chap.number}"
