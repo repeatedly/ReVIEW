@@ -83,7 +83,7 @@ module ReVIEW
 
   class ListIndex < Index
     def ListIndex.item_type
-      'list'
+      '(list|listnum)'
     end
   end
 

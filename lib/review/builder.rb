@@ -59,6 +59,15 @@ module ReVIEW
       list_body lines
     end
 
+    def listnum(lines, id, caption)
+      begin
+        list_header id, caption
+      rescue IndexError
+        error "no such list: #{id}"
+      end
+      listnum_body lines
+    end
+
     def source(lines, caption)
       source_header caption
       source_body lines

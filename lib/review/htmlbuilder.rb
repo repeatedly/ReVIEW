@@ -155,7 +155,7 @@ module ReVIEW
     end
 
     def list_header(id, caption)
-      puts %Q[<p class="toplabel">#{@chapter.list(id).number}: #{escape_html(caption)}</p>]
+      puts %Q[<p class="toplabel">リスト#{@chapter.list(id).number}: #{escape_html(caption)}</p>]
     end
 
     def list_body(lines)
@@ -182,11 +182,11 @@ module ReVIEW
       puts '</div>'
     end
 
-    def emlist(lines)
+    def listnum_body(lines)
       puts '<div class="code">'
-      puts '<pre class="emlist">'
-      lines.each do |line|
-        puts detab(line)
+      puts '<pre class="list">'
+      lines.each_with_index do |line, i|
+        puts detab(i.to_s.rjust(2) + ": " + line)
       end
       puts '</pre>'
       puts '</div>'

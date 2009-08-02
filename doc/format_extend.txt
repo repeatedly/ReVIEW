@@ -13,13 +13,29 @@ ReVIEW フォーマット(拡張)
    puts "hello world!"
   //}
 
+■行番号付きキャプションありリスト
+
+キャプションありのリスト(list)で自動的に行番号がつきます。
+
+[例]
+
+  //listnum[hello][ハローワールド]{
+   puts "hello world!"
+  //}
+
+参照方法はlistと変わりません。
+
+[例]
+
+  ..は@<list>{hello}をみてください。
+
 ■行番号付きキャプションなしリスト
 
 キャプション無しのリスト(emlist)で自動的に行番号がつきます。
 
 [例]
 
-  //emlistnum[/hello/world.rb]{
+  //emlistnum{
    puts "hello world!"
   //}
 
