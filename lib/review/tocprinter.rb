@@ -85,9 +85,14 @@ module ReVIEW
       book.each_part do |part|
         html << h1(part.name) unless part.name.empty?
         part.each_section do |chap|
-          name = "chap#{chap.number}"
-          label = "第#{chap.number}章 #{chap.label}"
-          html << h2(a_name(escape_html(name), escape_html(label)))
+          if chap.number
+            name = "chap#{chap.number}"
+            label = "第#{chap.number}章 #{chap.label}"
+            html << h2(a_name(escape_html(name), escape_html(label)))
+          else
+            label = "#{chap.label}"
+            html << h2(escape_html(label))
+          end
           return unless print?(2)
           if print?(3)
             html << chap_sections_to_s(chap)
