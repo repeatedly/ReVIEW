@@ -69,12 +69,12 @@ end
 def print_chapter_volume(chap)
   vol = chap.volume
   printf "%s %3dKB %6dC %5dL %3dP %s %-s\n",
-         chapnumstr(chap.number), vol.kbytes, vol.chars, vol.lines, (vol.kbytes/2),
+         chapnumstr(chap.number), vol.kbytes, vol.chars, vol.lines, vol.page,
          "#{chap.name} ".ljust(25, '.'), chap.title
 end
 
 def print_volume(vol)
-  printf "    %3dKB %6dC %5dL %3dP\n", vol.kbytes, vol.chars, vol.lines, (vol.kbytes/2)
+  printf "    %3dKB %6dC %5dL %3dP\n", vol.kbytes, vol.chars, vol.lines, vol.page
 end
 
 def chapnumstr(n)
