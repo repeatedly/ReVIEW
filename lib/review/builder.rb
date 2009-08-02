@@ -30,6 +30,7 @@ module ReVIEW
       @chapter = chapter
       @location = location
       @output = StringIO.new
+      @book = ReVIEW.book
       builder_init_file
     end
 

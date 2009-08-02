@@ -36,7 +36,7 @@ module ReVIEW
     private :builder_init_file
 
     def result
-      layout_file = File.join(@chapter.dirname, "layouts", "layout.erb")
+      layout_file = File.join(@book.basedir, "layouts", "layout.erb")
       if File.exists?(layout_file)
         messages() +
           HTMLLayout.new(@output.string, @chapter.title, layout_file).result
@@ -337,7 +337,7 @@ module ReVIEW
     end
 
     def inline_bib(id)
-      %Q(<a href="./bib.html\#bib-#{id}">[#{@chapter.bibpaper(id).number}]</a>)
+      %Q(<a href=".#{@book.bib_file.gsub(/re$/, "html")}\#bib-#{id}">[#{@chapter.bibpaper(id).number}]</a>)
     end
 
     def nofunc_text(str)
