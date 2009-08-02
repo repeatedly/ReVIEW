@@ -96,7 +96,7 @@ module ReVIEW
           end
         end
       end
-      puts HTMLLayout.new(html, "目次", File.join(book.basedir, "layouts", "layout.html")).result
+      puts HTMLLayout.new(html, "目次", File.join(book.basedir, "layouts", "layout.erb")).result
     end
 
     private
