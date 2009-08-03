@@ -192,6 +192,16 @@ module ReVIEW
       puts '</div>'
     end
 
+    def emlist(lines)
+      puts '<div class="code">'
+      puts '<pre class="emlist">'
+      lines.each do |line|
+        puts detab(line)
+      end
+      puts '</pre>'
+      puts '</div>'
+    end
+
     def emlistnum(lines)
       puts '<div class="code">'
       puts '<pre class="emlist">'
