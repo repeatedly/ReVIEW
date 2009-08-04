@@ -9,6 +9,7 @@
 ;;;
 ;;; uses
 ;;; C-c\c review-code-tag => @<code>{}
+;;; C-crc review-code-tag-region => @<code>{hogehoge}
 
 (require 'derived)
 
@@ -71,9 +72,19 @@
   (goto-char (- (point) 1))
 )
 
+(defun review-code-tag-region (beg end)
+  (interactive "r")
+  (goto-char end)
+  (insert "}")
+  (goto-char beg)
+  (insert "@<code>{")
+  (goto-char beg)
+)
+
 (defun review-setup-keys ()
   (interactive)
   (define-key review-mode-map "\C-c\c" 'review-code-tag)
+  (define-key review-mode-map "\C-crc" 'review-code-tag-region)
 )
 
 (provide 'review-mode)

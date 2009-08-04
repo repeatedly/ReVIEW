@@ -325,7 +325,7 @@ module ReVIEW
     end
 
     def inline_code(str)
-      %Q(<span class="inline-code"> #{str} </span>)
+      %Q(<span class="inline-code">#{str}</span>)
     end
 
     def text(str)
